@@ -20,7 +20,7 @@ const MONGODB_URI = 'mongodb+srv://mayank:mayanksharma@cluster0.xpmtenf.mongodb.
 mongoose.connect(MONGODB_URI)
 .then(res => {
     console.log("connected");
-    app.listen(3000);
+    app.listen(process.env.POST || 3000);
 })
 .catch(err => {
     console.log(err);
